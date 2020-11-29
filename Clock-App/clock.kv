@@ -1,0 +1,52 @@
+# File: Clock.kv
+
+<Label>:
+    font_name: 'Roboto'
+    font_size: 60
+    markup: True
+
+
+
+<RobotoButton@Button>:
+    font_name: 'Roboto'
+    background_normal: 'images/button/blue_normal.png'
+    background_down: 'images/button/blue_down.png'
+    border: (2,2,2,2)
+    font_size: 25
+    bold: True
+
+
+BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        id: time
+        text:"[b]00[/b]:00:00"
+       # markup: True
+        font_name: 'Roboto'
+
+
+    BoxLayout:
+        orientation:'horizontal'
+        height: 90
+        padding: 20
+        spacing: 50
+        size_hint: (1, None)
+
+        RobotoButton:
+            text: 'Start'
+
+        RobotoButton:
+            text: 'Reset'
+            background_normal: 'images/button/red_normal.png'
+            background_down: 'images/button/red_down.png'
+
+    Label:
+        id: stopwatch
+        text: '00:[size=50]00[/size].[size=40]00[/size]'
+
+#ClockLayout:
+#    time_prop: time
+
+#    Label:
+#        id: time
